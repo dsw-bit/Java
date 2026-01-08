@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class BasicCollectionProgram {
+    public static void main(String[] args) {
+       
+        List<String> fruits = new ArrayList<>();
+
+     
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Mango");
+        System.out.println("Initial List: " + fruits);
+
+       
+        String firstFruit = fruits.get(0);
+        System.out.println("First Fruit: " + firstFruit);
+
+        
+        fruits.set(1, "Grape");
+        System.out.println("List after updating Banana to Grape: " + fruits);
+
+       
+        fruits.remove("Orange"); // removes by object
+    
+        System.out.println("List after removing Orange: " + fruits);
+
+    
+        System.out.println("\nIterating through the list:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+       
+        System.out.println("Total elements in the list: " + fruits.size());
+
+     
+        fruits.clear();
+        System.out.println("List after clearing all elements: " + fruits);
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class countryname
+{
+    public static void main(String args[]) 
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number of countries:");
+        int n = sc.nextInt();
+
+        String[] countryname = new String[n];
+
+        System.out.println("Enter country names:");
+        for (int i = 0; i < n; i++) {
+            System.out.println("Country name " + (i + 1) + ":");
+            countryname[i] = sc.next();
+        }
+
+        System.out.println("Country Names: " + Arrays.toString(countryname));
+    }
+}

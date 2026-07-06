@@ -1,0 +1,32 @@
+import java.util.*;
+public class FixedSizeArray1 {
+	public static void main(String[] args)
+       	{
+	Scanner sc=new Scanner(System.in);
+	int i;
+        int[] originalArray = new int[4];
+	for(i=0;i<originalArray.length;i++)
+	{
+	originalArray[i]=sc.nextInt();
+	}
+	System.out.print("Original Array: ");
+        for (i = 0; i < originalArray.length; i++) {
+            System.out.print(originalArray[i] + " ");
+        }
+
+        int newElement = 50;
+
+        int[] newArray = new int[originalArray.length + 1];
+
+        for (i = 0; i < originalArray.length; i++) {
+            newArray[i] = originalArray[i];
+        }
+
+        newArray[newArray.length - 1] = newElement;
+
+        System.out.print("\nArray after adding element: ");
+        for (i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+    }
+}

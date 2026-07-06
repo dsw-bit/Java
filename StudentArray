@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+class Student {
+    int rollNo;
+    String name;
+    String classn;
+
+   
+    void accept() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Roll Number: ");
+        rollNo = sc.nextInt();
+
+        sc.nextLine(); 
+        System.out.print("Enter Name: ");
+        name = sc.next();
+
+        System.out.print("Enter class: ");
+      classn = sc.next();
+    }
+    
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name   : " + name);
+        System.out.println("class : " + classn);
+        System.out.println("-----------------------");
+    }
+}
+
+public class StudentArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of students: ");
+        int n = sc.nextInt();
+
+        
+        Student[] students = new Student[n];
+
+        
+        for (int i = 0; i < n; i++) {
+            students[i] = new Student();
+            System.out.println("\nEnter details of student " + (i + 1));
+            students[i].accept();
+        }
+
+        // Display details
+        System.out.println("\n--- Student Details ---");
+        for (int i = 0; i < n; i++) {
+            students[i].display();
+        }
+    }
+}
